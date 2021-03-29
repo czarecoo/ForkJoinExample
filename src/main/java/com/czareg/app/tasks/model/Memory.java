@@ -1,4 +1,4 @@
-package com.czareg.app.tasks.memory;
+package com.czareg.app.tasks.model;
 
 public class Memory {
     private String size = "8GB";

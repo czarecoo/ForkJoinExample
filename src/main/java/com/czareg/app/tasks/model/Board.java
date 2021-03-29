@@ -1,4 +1,4 @@
-package com.czareg.app.tasks.board;
+package com.czareg.app.tasks.model;
 
 public class Board {
     private String type = "MSI MEG Z490I UNIFY";

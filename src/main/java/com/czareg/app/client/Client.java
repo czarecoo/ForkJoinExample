@@ -1,13 +1,15 @@
 package com.czareg.app.client;
 
-import com.czareg.app.tasks.board.Board;
-import com.czareg.app.tasks.irmc.Irmc;
-import com.czareg.app.tasks.memory.Memory;
+import com.czareg.app.tasks.model.Board;
+import com.czareg.app.tasks.model.Irmc;
+import com.czareg.app.tasks.model.Memory;
 
 import java.time.Instant;
+import java.util.Collections;
+import java.util.List;
 
 public class Client {
-    public Board getBoard() {
+    public List<Board> getBoards(String data) {
         System.out.println("Started waiting for board");
         System.out.println(Instant.now());
         try {
@@ -18,10 +20,10 @@ public class Client {
         }
         System.out.println("Finished waiting for board");
         System.out.println(Instant.now());
-        return new Board();
+        return Collections.singletonList(new Board());
     }
 
-    public Irmc getIrmc() {
+    public Irmc getIrmc(String data) {
         System.out.println("Started waiting for irmc");
         System.out.println(Instant.now());
         try {
@@ -35,7 +37,7 @@ public class Client {
         return new Irmc();
     }
 
-    public Memory getMemory() {
+    public Memory getMemory(String data) {
         System.out.println("Started waiting for memory");
         System.out.println(Instant.now());
         try {
